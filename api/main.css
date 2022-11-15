@@ -1,0 +1,14 @@
+.guestwindow {
+
+    position: fixed;
+    background-color: red;
+    top: 0;
+
+}
+
+.gb {
+
+    background-color: black;
+    color: white;
+
+}

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic GuestBook By the Wheelchair Guy</title>
-    <link rel="stylesheet" href=".main.css">
+    <link rel="stylesheet" href="./api/main.css">
     <style>
     
     </style>
@@ -20,7 +20,7 @@
 <label>Most dragons don’t know how to read. They hiss and fume and guard their hoard. A tasty knight is what they need</label><input type="text" name='question1' value="What is your question?" required>
 <label>For dinner (they spit out the sword),
 Then go to sleep on heaps of treasure. They’ve no use for the written word.</label><input type="text" name='question2' value="What is your question?" required>
-<label>But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,</label><input type="text" name='question3' value="What is your question?" required><label>But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,</label><input type="text" name='question4' value="What is your question?" required><label>And all my days and half my nights Were spent in reading story-books, A life more thrilling than it looks.Now that I’m old and cannot see To read, the lady’s youngest child Comes every day to read to me,</label><input type="text" name='question5' value="What is your question?" required>
+<label>But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,</label><input type="text" name='question3' value="What is your question?" required><label>But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,</label><input type="text" name='question4' value="What is your question?" required><label>And all my days and half my nights Were spent in reading story-books, A life more thrilling than it looks.Now that I’m old and cannot see To read, the lady’s youngest child Comes every day to read to me,</label><input type="text" name='question5' required>
 
 
 <br>
@@ -44,19 +44,19 @@ Then go to sleep on heaps of treasure. They’ve no use for the written word.</l
                 $q5 = $_POST['question5'];
            //}
                 
-                     $file = fopen("guestbook","a");
+                     $file = fopen("comment.html","a");
                      fwrite($file, "<div class='gb'>
                      Dear&nbsp;".$fname."<br>
                      Most dragons don’t know how to read. They hiss and fume and guard their hoard. A tasty knight is what they need&nbsp;"
                      .$q1."&nbsp;For dinner (they spit out the sword),
-                     Then go to sleep on heaps of treasure. They’ve no use for the written word.&nbsp;".$q2."&nbsp;But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,&nbsp;".$q3."&nbsp;But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,&nbsp;".$q4.
+                     Then go to sleep on heaps of treasure. They’ve no use for the written word.&nbsp;".$q2."&nbsp;But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,&nbsp;".$q3."&nbsp;But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,&nbsp;".$q4."&nbsp;But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,&nbsp;".$q5.
                      "</div><hr>");
                      //fwrite($file, "<b>E-Mail</b> ".$email."<br>");
                      //fwrite($file, "<b>Message</b> ".$msg."<hr>");
                      fclose($file);
                     }
             
-               require("guestbook");
+               require("comment.html");
 ?>
 </div>
 

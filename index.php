@@ -8,33 +8,28 @@
     <link rel="stylesheet" href="./api/main.css">
     <style>
     
-    input[type="text"], input[type="email"]  {
-       margin-left:60px;
-       display: block;
-         margin-top: -20px;
- 
-    }
-    label{
-       
- text-align: right;
-   
-    }
-    
-    
     </style>
 </head>
 <body>
-
+<div class="top">
 <form action='index.php' method='post'>
-<label> Name</label> <input type="text" name='name'><br>
-<label> E-mail </label> <input type="email" name='email'><br>
-<label>Message </label> <input type="text" name='msg'><br>
-<input type="submit" value="post">
 
+<!-- LETTER -->
+
+<label>Dear</label><input type="text" name='name' value="Who do you want to address?" required><br>
+<label>Most dragons don’t know how to read. They hiss and fume and guard their hoard. A tasty knight is what they need</label><input type="text" name='question1' value="What is your question?" required>
+<label>For dinner (they spit out the sword),
+Then go to sleep on heaps of treasure. They’ve no use for the written word.</label><input type="text" name='question2' value="What is your question?" required>
+<label>But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,</label><input type="text" name='question3' value="What is your question?" required><label>But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,</label><input type="text" name='question4' value="What is your question?" required><label>And all my days and half my nights Were spent in reading story-books, A life more thrilling than it looks.Now that I’m old and cannot see To read, the lady’s youngest child Comes every day to read to me,</label><input type="text" name='question5' value="What is your question?" required>
+
+
+<br>
+<input class="inbtn" type="submit" value="post">
  </form>
+</div>
  <hr>
  
-
+<div class="bottom">
 <?php
 
 
@@ -42,12 +37,20 @@
 
            if(isset($_POST['name'])) {
                 $fname = $_POST['name'];
-                $email = $_POST['email'];
-                $msg = $_POST['msg'];
+                $q1 = $_POST['question1'];
+                $q2 = $_POST['question2'];
+                $q3 = $_POST['question3'];
+                $q4 = $_POST['question4'];
+                $q5 = $_POST['question5'];
            //}
                 
                      $file = fopen("guestbook","a");
-                     fwrite($file, "<div class='gb'><b>First name</b>".$fname."<br><b>E-Mail</b> ".$email."<br></div><b>Message</b> ".$msg."<hr>");
+                     fwrite($file, "<div class='gb'>
+                     Dear&nbsp;".$fname."<br>
+                     Most dragons don’t know how to read. They hiss and fume and guard their hoard. A tasty knight is what they need&nbsp;"
+                     .$q1."&nbsp;For dinner (they spit out the sword),
+                     Then go to sleep on heaps of treasure. They’ve no use for the written word.&nbsp;".$q2."&nbsp;But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,&nbsp;".$q3."&nbsp;But I learned early to take pleasure In reading tales and poetry And soon I knew that I preferred Reading a book to fighting knights. I lived on apple pie and tea, Which a kind lady made for me,&nbsp;".$q4.
+                     "</div><hr>");
                      //fwrite($file, "<b>E-Mail</b> ".$email."<br>");
                      //fwrite($file, "<b>Message</b> ".$msg."<hr>");
                      fclose($file);
@@ -55,7 +58,7 @@
             
                require("guestbook");
 ?>
-
+</div>
 
 
     
@@ -68,4 +71,10 @@
          
 
 </body>
+<script>
+     if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
+
 </html>

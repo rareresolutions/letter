@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic GuestBook By the Wheelchair Guy</title>
     <link rel="stylesheet" href="main.css">
-    <style>
-    
-    </style>
+   <script>
+     if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </head>
 <body>
 <div class="top">
@@ -71,9 +73,5 @@ Then go to sleep on heaps of treasure. They’ve no use for the written word.</l
          
 
 </body>
-<script>
-     if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
-}
-</script>
+
 </html>

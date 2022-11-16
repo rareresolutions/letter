@@ -7,6 +7,9 @@
     <title>Basic GuestBook By the Wheelchair Guy</title>
     <link rel="stylesheet" href="main.css">
 </head>
+    <style>
+        
+    </style>
 <body>
 <div class="top">
 <form action='index.php' method='post'>

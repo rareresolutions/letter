@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="top">
-<form action='index.php' method='post'>
+<form action='index.php' method='post' autocomplete="off">
 
 <!-- LETTER -->
 

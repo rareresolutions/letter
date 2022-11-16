@@ -71,10 +71,5 @@ Then go to sleep on heaps of treasure. They’ve no use for the written word.</l
          
 
 </body>
-<script>
-     if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
-}
-</script>
 
 </html>

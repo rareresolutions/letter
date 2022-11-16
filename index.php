@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="top">
-<form action='index.php' method='post' autocomplete="off">
+<form action='index.php' method='post'>
 
 <!-- LETTER -->
 
